@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.util.Log;
 import edu.mit.media.funf.probe.builtin.AccelerometerFeaturesProbe;
 
-public class SimpleActivity extends Activity {
+public class UploadActivity extends Activity {
 
-    private static final String TAG = "SimpleActivity";
+    private static final String TAG = "UploadActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,13 @@ public class SimpleActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        runAccelerometerFeaturesProbe();
+        sendUploadIntent();
+    }
+
+    private void sendUploadIntent() {
+        Intent uploadIntent = new Intent(this, MainPipeline.class);
+        uploadIntent.setAction(MainPipeline.ACTION_UPLOAD_DATA);
+        startService(uploadIntent);
     }
 
     private void runAccelerometerFeaturesProbe() {
