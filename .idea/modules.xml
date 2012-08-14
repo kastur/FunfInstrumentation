@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FunfLibrary/FunfLibrary.iml" filepath="$PROJECT_DIR$/FunfLibrary/FunfLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FunfUI/FunfUI.iml" filepath="$PROJECT_DIR$/FunfUI/FunfUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/InstrumentedApp/InstrumentedApp.iml" filepath="$PROJECT_DIR$/InstrumentedApp/InstrumentedApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/FunfLibrary/test/Test.iml" filepath="$PROJECT_DIR$/FunfLibrary/test/Test.iml" />
     </modules>
