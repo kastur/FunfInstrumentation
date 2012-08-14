@@ -1,6 +1,7 @@
 FunfLibrary/gen/*
-InstrumentedApp/gen/*
 FunfLibrary/test/gen/*
+FunfUI/gen/*
+InstrumentedApp/gen/*
 local.properties
 out/*
 .idea/workspace.xml
