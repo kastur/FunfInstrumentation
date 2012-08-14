@@ -46,7 +46,13 @@ import static edu.mit.media.funf.Utils.TAG;
  */
 public class AsyncSharedPrefs implements SharedPreferences, OnSharedPreferenceChangeListener {
 
-	private static final Object mContent = new Object();
+    @Override
+    public Set<String> getStringSet(String s, Set<String> strings) {
+        Log.e(TAG, "AsyncSharedPrefs::getStringSet is a stub!");
+        return null;
+    }
+
+    private static final Object mContent = new Object();
 	
 	private final Map<String,Object> mMap;
 	private final SharedPreferences prefs;
@@ -157,8 +163,18 @@ public class AsyncSharedPrefs implements SharedPreferences, OnSharedPreferenceCh
 	
 	
 	public final class AsyncEditorImpl implements SharedPreferences.Editor {
+        @Override
+        public void apply() {
+            Log.e(TAG, "AsyncEditorImpl::apply() is a stub!");
+        }
 
-		private final Map<String, Object> mModified = new HashMap<String, Object>();
+        @Override
+        public Editor putStringSet(String s, Set<String> strings) {
+            Log.e(TAG, "AsyncEditorImpl::putStringSet is a stub!");
+            return null;
+        }
+
+        private final Map<String, Object> mModified = new HashMap<String, Object>();
         private boolean mClear = false;
 		private SharedPreferences.Editor editor = prefs.edit();
         
