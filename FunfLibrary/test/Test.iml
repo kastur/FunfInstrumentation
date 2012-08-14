@@ -49,6 +49,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="FunfLibrary" />
+    <orderEntry type="library" name="libs" level="project" />
   </component>
 </module>
 

@@ -39,17 +39,8 @@
     </content>
     <orderEntry type="jdk" jdkName="Android 4.0.3 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../FunfLibrary/test/libs/gson-1.7.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module" module-name="Test" />
     <orderEntry type="module" module-name="FunfLibrary" />
+    <orderEntry type="library" name="libs" level="project" />
   </component>
 </module>
 
