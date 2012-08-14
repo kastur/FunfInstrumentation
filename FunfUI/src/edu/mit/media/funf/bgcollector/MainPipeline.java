@@ -55,10 +55,25 @@ public class MainPipeline extends ConfiguredPipeline {
 		if (ACTION_RUN_ONCE.equals(intent.getAction())) {
 			String probeName = intent.getStringExtra(RUN_ONCE_PROBE_NAME);
 			runProbeOnceNow(probeName);
+        } else if (intent.getStringExtra("EVENT_NAME") != null) {
+            handleInstrumentationIntent(intent);
 		} else {
 			super.onHandleIntent(intent);
 		}
 	}
+
+    private void handleInstrumentationIntent(Intent intent) {
+        final String event = intent.getStringExtra("EVENT_NAME");
+        final String pkg = intent.getStringExtra("PKG_NAME");
+        final String cls = intent.getStringExtra("CLS_NAME");
+        Bundle data = new Bundle();
+        data.putString(Probe.PROBE, "Instrumentation");
+        data.putLong(Probe.TIMESTAMP, System.currentTimeMillis());
+        data.putString("event", event);
+        data.putString("pkg", pkg);
+        data.putString("cls", cls);
+        onDataReceived(data);
+    }
 	
 	@Override
 	public BundleSerializer getBundleSerializer() {
