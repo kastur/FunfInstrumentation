@@ -6,6 +6,8 @@
       <directory url="file://$PROJECT_DIR$/FunfLibrary/test/gen" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/FunfLibrary/gen" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/InstrumentedApp/gen" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/FunfUI/gen" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/InstrumentedApp/gen/gen" includeSubdirectories="true" />
     </excludeFromCompile>
     <resourceExtensions />
     <wildcardResourcePatterns>
