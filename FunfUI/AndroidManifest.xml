@@ -67,7 +67,12 @@
         <service android:name="edu.mit.media.funf.probe.builtin.AccelerometerFeaturesProbe"></service>
         
         <!-- Framework services -->
-        <service android:name=".MainPipeline"></service>
+        <service android:name=".MainPipeline" android:exported="true">
+            <intent-filter>
+                <action android:name="edu.mit.media.funf.bgcollector.MainPipeline" />
+            </intent-filter>
+        </service>
+
         <service android:name="edu.mit.media.funf.storage.NameValueDatabaseService"></service>
         <service android:name="edu.mit.media.funf.storage.HttpUploadService"></service>
         
