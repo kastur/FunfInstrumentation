@@ -808,7 +808,7 @@ public abstract class Probe extends CustomizedIntentService implements BaseProbe
 		}
 		
 		Set<String> packagePermissions = new HashSet<String>(Arrays.asList(info.requestedPermissions));
-		Log.v(Utils.TAG, "Package permissions for '" + packageName + "': " + Utils.join(packagePermissions, ", "));
+		//Log.v(Utils.TAG, "Package permissions for '" + packageName + "': " + Utils.join(packagePermissions, ", "));
 		for (String permission :  nonNullStrings(requiredPermissions)) {
 			if (!packagePermissions.contains(permission)) {
 				Log.w(Utils.TAG, "Package '" + packageName + "' does not have the required permission '" + permission + "' to run this probe.");
