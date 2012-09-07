@@ -1,0 +1,2 @@
+echo "Copy InstrumentedApp.apk from ../out into inout"
+cp ../out/production/InstrumentedApp/InstrumentedApp.apk inout/

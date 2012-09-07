@@ -1,0 +1,3 @@
+echo "Decode apk"
+rm -rf inout/apk_decoded
+apktool decode --no-res inout/InstrumentedApp.apk inout/apk_decoded

@@ -1,0 +1,8 @@
+echo "------ PATCHING smali files in framework_decoded"
+
+echo "Copy * to android/override"
+rm -rf inout/framework_decoded/smali/android/override
+mkdir inout/framework_decoded/smali/android/override
+cp -r inout/apk_decoded/smali/android/override/* inout/framework_decoded/smali/android/override
+
+echo "------ FINISHED PATCHING"
